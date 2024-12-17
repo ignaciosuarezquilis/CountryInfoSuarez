@@ -49,7 +49,7 @@ const getCountryInfo = async (req, res) => {
       }
   
     } catch (error) {
-      console.log('Error:', error); // Loguear el error para depuración
+      console.log('Error:', error);
       res.status(500).json({ message: 'Error fetching country info', error: error.message });
     }
   };

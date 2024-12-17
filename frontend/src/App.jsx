@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import CountryList from './pages/CountryList';
-import CountryInfo from './pages/CountryInfo';  // Importamos el componente de la página de detalles del país
+import CountryInfo from './pages/CountryInfo'; 
 
 const App = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<CountryList />} /> {/* Ruta para la lista de países */}
-        <Route path="/country/:countryCode" element={<CountryInfo />} /> {/* Ruta para la página de detalles del país */}
+        <Route path="/" element={<CountryList />} /> 
+        <Route path="/country/:countryCode" element={<CountryInfo />} /> 
       </Routes>
     </Router>
   );

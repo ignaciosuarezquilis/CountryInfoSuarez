@@ -1,42 +1,40 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
-import '../styles/PopulationChart.css'; // Asegúrate de que la ruta sea correcta
+import '../styles/PopulationChart.css'; 
 
-// Registramos los componentes necesarios de Chart.js
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
 const PopulationChart = ({ data }) => {
-  // Preparamos los datos para el gráfico
   const chartData = {
-    labels: data.map(item => item.year), // Extraemos los años
+    labels: data.map(item => item.year),
     datasets: [
       {
         label: 'Población',
-        data: data.map(item => item.value), // Extraemos los valores de población
+        data: data.map(item => item.value),
         borderColor: 'rgba(75, 192, 192, 1)',
-        tension: 0.1, // Suaviza la línea
-        pointRadius: 0, // Elimina los puntos en la línea
-        borderWidth: 3, // Establece el grosor de la línea
+        tension: 0.1, 
+        pointRadius: 0, 
+        borderWidth: 3, 
       }
     ]
   };
 
   const options = {
-    responsive: true, // Asegura que el gráfico sea responsivo
-    maintainAspectRatio: false, // Asegura que el gráfico mantenga su aspecto sin restricciones
+    responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
-        position: 'top', // Posición de la leyenda
+        position: 'top',
       }
     },
     animation: {
-      duration: 0, // Desactiva las animaciones para evitar el "vibrado"
+      duration: 0,
     },
     interaction: {
-      mode: 'nearest', // Mejor comportamiento de hover
-      intersect: false, // Desactiva el efecto de intersección
-      axis: 'x', // Establece que la interacción solo se de sobre el eje X (evita que el cursor se mueva verticalmente)
+      mode: 'nearest', 
+      intersect: false, 
+      axis: 'x',
     },
     scales: {
       x: {
@@ -45,7 +43,7 @@ const PopulationChart = ({ data }) => {
           text: 'Años',
         },
         grid: {
-          display: false, // Desactiva las líneas de la cuadrícula en el eje X
+          display: false,
         },
       },
       y: {
@@ -54,18 +52,18 @@ const PopulationChart = ({ data }) => {
           text: 'Población',
         },
         grid: {
-          display: false, // Desactiva las líneas de la cuadrícula en el eje Y
+          display: false,
         },
       },
     },
     elements: {
       line: {
-        tension: 0.1, // Suaviza la línea
-        borderWidth: 3, // Ancho de la línea
-        fill: false, // Evita que el área debajo de la línea se llene
+        tension: 0.1,
+        borderWidth: 3, 
+        fill: false,
       },
       point: {
-        radius: 0, // Elimina los puntos en la línea
+        radius: 0, 
       },
     },
   };

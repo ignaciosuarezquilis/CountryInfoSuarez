@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';  // Importamos Link de React Router
+import { Link } from 'react-router-dom'; 
 import axios from 'axios';
 
 const CountryList = () => {
@@ -32,7 +32,7 @@ const CountryList = () => {
       <ul>
         {countries.map((country) => (
           <li key={country.countryCode}>
-            <Link to={`/country/${country.countryCode}`}>  {/* Enlace a la página de detalles del país */}
+            <Link to={`/country/${country.countryCode}`}> 
               {country.name} ({country.countryCode})
             </Link>
           </li>
