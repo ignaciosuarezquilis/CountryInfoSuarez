@@ -1,0 +1,17 @@
+/* styles/PopulationChart.css */
+.chart-container {
+    margin: 20px auto;
+    max-width: 900px;  /* Limita el ancho máximo */
+    width: 90%; /* Hace que el gráfico ocupe el 90% del contenedor */
+    padding: 20px;
+    background-color: #f9f9f9; /* Fondo suave */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  }
+  
+  .chart-container canvas {
+    display: block; /* Asegura que el canvas ocupe el contenedor correctamente */
+    width: 100% !important; /* Fuerza el canvas a ocupar todo el contenedor */
+    height: auto !important; /* Mantiene la relación de aspecto */
+  }
+  

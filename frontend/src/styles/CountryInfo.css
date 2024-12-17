@@ -1,0 +1,14 @@
+.flag-container {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    margin: 20px auto; /* Margen de arriba y abajo, centrado horizontalmente */
+    padding: 10px;
+  }
+  
+  .flag-image {
+    width: 80%; /* Ajusta la bandera al 80% del tamaño disponible */
+    max-width: 600px; /* Tamaño máximo */
+    height: auto; /* Mantiene la relación de aspecto */
+  }
+  
